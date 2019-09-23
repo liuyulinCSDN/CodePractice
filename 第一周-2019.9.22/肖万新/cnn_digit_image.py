@@ -91,7 +91,7 @@ testloader = torch.utils.data.DataLoader(
 net = LeNet().to(device)           # 将所有最开始读取数据时的tensor变量copy一份到device所指定的CPU上去，之后的运算都在CPU上进行。
 criterion = nn.functional.nll_loss  # 交叉熵损失函数，通常用于多分类问题上
 optimizer = optim.SGD(net.parameters(), lr=LR, momentum=0.9)    #优化方法用SGD
-
+#
 # 训练
 if __name__ == "__main__":
     net.train()
