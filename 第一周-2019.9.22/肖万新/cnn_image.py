@@ -6,7 +6,7 @@ import torch.optim as optim
 # import argparse
 import torch.nn.functional as F
 # 定义是否使用GPU
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cpu")
 # 定义网络结构
 class LeNet(nn.Module):
     def __init__(self):
