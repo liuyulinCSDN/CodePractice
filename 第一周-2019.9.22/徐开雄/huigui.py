@@ -35,7 +35,7 @@ print(net)
 optimizer = torch.optim.SGD(net.parameters(), lr=0.2)
 loss_func = torch.nn.MSELoss()
 # plt.ion()
-for t in range(200):
+for t in range(100):
     prediction = net(x)
 
     loss = loss_func(prediction, y)
@@ -43,7 +43,7 @@ for t in range(200):
     optimizer.zero_grad() #梯度降为0
     loss.backward()       #反向传递
     optimizer.step()
-    if t % 5 == 0:
+    if t % 10 == 0:
         plt.cla()
         plt.scatter(x.data.numpy(), y.data.numpy())
         plt.plot(x.data.numpy(), prediction.data.numpy(),'r-', lw=5)
